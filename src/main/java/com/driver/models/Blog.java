@@ -20,7 +20,7 @@ public class Blog {
     @JoinColumn
     private User user;
     @OneToOne(mappedBy = "blog",cascade = CascadeType.ALL)
-    List<Image>images;
+    List<Image>ImageList;
 
     public Blog() {
     }
@@ -31,11 +31,11 @@ public class Blog {
         this.user = user;
     }
 
-    public Blog(String title, String content, User user, List<Image>images) {
+    public Blog(String title, String content, User user, List<Image>ImageList) {
         this.title = title;
         this.content = content;
         this.user=user;
-        this.images=images;
+        this.ImageList=ImageList;
 
     }
 
@@ -79,11 +79,11 @@ public class Blog {
         this.user = user;
     }
 
-    public List<Image> getImages() {
-        return images;
+    public List<Image> getImageList() {
+        return ImageList;
     }
 
-    public void setImages(List<Image> images) {
-        this.images = images;
+    public void setImageList(List<Image> ImageList) {
+        this.ImageList = ImageList;
     }
 }
